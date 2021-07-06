@@ -41,10 +41,10 @@ if not "%~1" == "" (
 	exit /b 1
 )
 
+if not defined NeoML_BUILD_DIR (
+	set "NeoML_BUILD_DIR=%ROOT%\_cmake_working_dir\NeoML"
+)
 if not defined DIR (
-	if not defined NeoML_BUILD_DIR (
-		set "NeoML_BUILD_DIR=%ROOT%\_cmake_working_dir\NeoML"
-	)
 	set "DIR=%NeoML_BUILD_DIR%\%ARCH%" (
 )
 
